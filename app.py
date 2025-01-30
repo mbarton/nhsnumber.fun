@@ -5,7 +5,7 @@ def handler(event, context):
     quantity = 1
 
     if path != "/":
-        quantity = max(int(path[1:]), 1000)
+        quantity = min(int(path[1:]), 1000)
 
     numbers = nhs_number.generate(quantity=quantity)
 
